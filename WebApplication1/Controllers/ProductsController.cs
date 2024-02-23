@@ -6,9 +6,11 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApplication1.Commands;
 using WebApplication1.Data;
 using WebApplication1.models;
 using WebApplication1.Queries;
+using AutoMapper;
 
 namespace WebApplication1.Controllers
 {
@@ -19,6 +21,8 @@ namespace WebApplication1.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IMediator _mediator;
+        private readonly IMapper _mapper;
+
 
 
         public ProductsController(AppDbContext context, IMediator mediator)
@@ -46,8 +50,6 @@ namespace WebApplication1.Controllers
             var query = new GetProductQuery(id);
             var result = await _mediator.Send(query);
 
-
-
             return Ok(result);
         }
 
@@ -61,25 +63,17 @@ namespace WebApplication1.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(product).State = EntityState.Modified;
+            var request = new UpdateProductRequest(id, product);
+            var result = await _mediator.Send(request);
 
-            try
+            if (result)
             {
-                await _context.SaveChangesAsync();
+                return NoContent(); // Update successful
             }
-            catch (DbUpdateConcurrencyException)
+            else
             {
-                if (!ProductExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NotFound(); // Product not found or update failed
             }
-
-            return NoContent();
         }
 
         // POST: api/Products
@@ -87,15 +81,13 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
-          if (_context.Product == null)
-          {
-              return Problem("Entity set 'AppDbContext.Product'  is null.");
-          }
-            _context.Product.Add(product);
-            await _context.SaveChangesAsync();
+            var query = new CreateProductRequest(product);
+            var result = await _mediator.Send(query);
 
-            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+            return Ok(result);
         }
+      
+     
 
         // DELETE: api/Products/5
         [HttpDelete("{id}")]
