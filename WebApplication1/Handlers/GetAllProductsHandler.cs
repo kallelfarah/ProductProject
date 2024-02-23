@@ -18,6 +18,7 @@ namespace WebApplication1.Handlers
         public async Task<IEnumerable<Product>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
         {
             var products = await _context.Product.ToListAsync(cancellationToken);
+
             return _mapper.Map<IEnumerable<Product>>(products);
         }
     }

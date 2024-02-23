@@ -34,6 +34,8 @@ namespace WebApplication1.Controllers
             var query = new GetAllProductsQuery();
             var result = await _mediator.Send(query);
             return Ok(result);
+            Console.WriteLine("worked");
+
         }
 
         // GET: api/Products/5
