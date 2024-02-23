@@ -29,12 +29,13 @@ namespace WebApplication1.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProduct()
+        public async Task<ActionResult<IEnumerable<Product>>> GetAllProduct()
         {
             var query = new GetAllProductsQuery();
             var result = await _mediator.Send(query);
-            return Ok(result);
             Console.WriteLine("worked");
+
+            return Ok(result);
 
         }
 
@@ -42,18 +43,12 @@ namespace WebApplication1.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-          if (_context.Product == null)
-          {
-              return NotFound();
-          }
-            var product = await _context.Product.FindAsync(id);
+            var query = new GetProductQuery(id);
+            var result = await _mediator.Send(query);
 
-            if (product == null)
-            {
-                return NotFound();
-            }
 
-            return product;
+
+            return Ok(result);
         }
 
         // PUT: api/Products/5
