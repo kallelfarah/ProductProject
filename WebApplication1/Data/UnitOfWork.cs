@@ -7,7 +7,7 @@ namespace WebApplication1.Data
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly AppDbContext _context;
-        protected readonly ILogger _logger;
+     //   protected readonly ILogger _logger;
 
        public IProductRepository Product { get; private set; }
 
@@ -21,11 +21,10 @@ namespace WebApplication1.Data
         }
 
 
-        public UnitOfWork(AppDbContext context, ILogger logger )
+        public UnitOfWork(AppDbContext context )
         {
             _context = context;
-            _logger = logger;
-            Product = new ProductRepository(_context,_logger);
+            Product = new ProductRepository(_context);
         }
        
 

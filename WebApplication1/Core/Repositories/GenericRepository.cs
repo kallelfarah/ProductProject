@@ -9,13 +9,13 @@ namespace WebApplication1.Core.Repositories
 
         protected   AppDbContext _context;
         internal DbSet<T> _dbSet;
-        protected readonly ILogger _logger;
+        //protected readonly ILogger _logger;
 
-        public GenericRepository(AppDbContext context, ILogger logger)
+        public GenericRepository(AppDbContext context)
         {
             _context = context;
             
-            _logger = logger;
+          //  _logger = logger;
             this._dbSet = context.Set<T>();  
         }
 

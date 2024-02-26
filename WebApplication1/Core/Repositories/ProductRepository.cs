@@ -6,7 +6,7 @@ namespace WebApplication1.Core.Repositories
 {
     public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
-        public ProductRepository(AppDbContext context, ILogger logger) : base(context, logger) { }
+        public ProductRepository(AppDbContext context) : base(context ) { }
 
         public override async Task<IEnumerable<Product>> All()
         {
@@ -16,7 +16,7 @@ namespace WebApplication1.Core.Repositories
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "An error occurred while retrieving products.");
+              
                 throw; 
             }
         }
