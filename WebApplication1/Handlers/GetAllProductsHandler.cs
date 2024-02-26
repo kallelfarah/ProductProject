@@ -9,6 +9,8 @@ namespace WebApplication1.Handlers
 {
     public class GetAllProductsHandler : IRequestHandler<GetAllProductsQuery, IEnumerable<Product>>
     {
+
+
         public readonly AppDbContext _context;
         public readonly IMapper _mapper;
         public GetAllProductsHandler(AppDbContext context, IMapper mapper) {

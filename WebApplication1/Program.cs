@@ -1,10 +1,10 @@
 
-using Microsoft.EntityFrameworkCore;
-using WebApplication1.Data;
-using Microsoft.Extensions.DependencyInjection;
-using MediatR;
 using AutoMapper;
-using System.Configuration;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Core;
+using WebApplication1.Data;
+
 namespace WebApplication1
 {
     public class Program
@@ -15,12 +15,15 @@ namespace WebApplication1
 
             ConfigureServices(builder.Services);
 
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<AppDbContext>(options =>
-           options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
+                  options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
+             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -41,9 +44,9 @@ namespace WebApplication1
         }
         private static void ConfigureServices(IServiceCollection services)
         {
-          
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            
+
             services.AddMediatR(typeof(Program));
         }
     }
