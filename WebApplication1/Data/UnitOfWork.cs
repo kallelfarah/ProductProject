@@ -21,11 +21,11 @@ namespace WebApplication1.Data
         }
 
 
-        public UnitOfWork(AppDbContext context, ILogger logger, IProductRepository productRepository)
+        public UnitOfWork(AppDbContext context, ILogger logger )
         {
             _context = context;
             _logger = logger;
-            Product = productRepository;
+            Product = new ProductRepository(_context,_logger);
         }
        
 
