@@ -2,8 +2,9 @@
 using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.Core;
-using WebApplication1.Data;
+using Buisness.Repositories;
+using Data;
+using Application.QueryHandler;
 
 namespace WebApplication1
 {
@@ -48,6 +49,11 @@ namespace WebApplication1
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddMediatR(typeof(Program));
+            services.AddMediatR(typeof(GetAllProductQueryHandler).Assembly);
+            services.AddMediatR(typeof(CreateProductCommandHandler).Assembly);
+
+
+
         }
     }
 }

@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\bin\Debug\net7.0\ApplicationContract.deps.json
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\bin\Debug\net7.0\ApplicationContract.runtimeconfig.json
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\bin\Debug\net7.0\ApplicationContract.dll
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\bin\Debug\net7.0\ApplicationContract.pdb
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\bin\Debug\net7.0\Buisness.dll
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\bin\Debug\net7.0\Buisness.pdb
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ApplicationContract.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ApplicationContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ApplicationContract.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ApplicationContract.AssemblyInfo.cs
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ApplicationContract.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ApplicationContract.csproj.CopyComplete
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ApplicationContract.dll
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\refint\ApplicationContract.dll
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ApplicationContract.pdb
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ApplicationContract.genruntimeconfig.cache
+C:\Users\User\source\repos\WebApplication1\ApplicationContract\obj\Debug\net7.0\ref\ApplicationContract.dll

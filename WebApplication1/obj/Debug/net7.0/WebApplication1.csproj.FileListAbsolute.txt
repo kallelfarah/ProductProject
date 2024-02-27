@@ -256,3 +256,11 @@ C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\Medi
 C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\Buisness.dll
+C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\Buisness.pdb
+C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\Application.dll
+C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\ApplicationContract.dll
+C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\Data.dll
+C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\ApplicationContract.pdb
+C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\Application.pdb
+C:\Users\User\source\repos\WebApplication1\WebApplication1\bin\Debug\net7.0\Data.pdb

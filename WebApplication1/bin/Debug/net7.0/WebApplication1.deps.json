@@ -8,8 +8,12 @@
     ".NETCoreApp,Version=v7.0": {
       "WebApplication1/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
+          "ApplicationContract": "1.0.0",
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Buisness": "1.0.0",
+          "Data": "1.0.0",
           "MediatR": "7.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.5",
@@ -2608,6 +2612,64 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "Application/1.0.0": {
+        "dependencies": {
+          "ApplicationContract": "1.0.0",
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Buisness": "1.0.0",
+          "Data": "1.0.0",
+          "MediatR": "7.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.5",
+          "Microsoft.EntityFrameworkCore": "7.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.16",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "runtime": {
+          "Application.dll": {}
+        }
+      },
+      "ApplicationContract/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Buisness": "1.0.0",
+          "MediatR": "7.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.5",
+          "Microsoft.EntityFrameworkCore": "7.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.16",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "runtime": {
+          "ApplicationContract.dll": {}
+        }
+      },
+      "Buisness/1.0.0": {
+        "runtime": {
+          "Buisness.dll": {}
+        }
+      },
+      "Data/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Buisness": "1.0.0",
+          "MediatR": "7.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.5",
+          "Microsoft.EntityFrameworkCore": "7.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.16",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "runtime": {
+          "Data.dll": {}
+        }
       }
     }
   },
@@ -4254,6 +4316,26 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ApplicationContract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Buisness/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

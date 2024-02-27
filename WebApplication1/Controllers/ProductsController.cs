@@ -6,11 +6,11 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.Commands;
-using WebApplication1.Data;
-using WebApplication1.models;
-using WebApplication1.Queries;
+using Data;
+using Buisness.Models;
+using ApplicationContract.Queries;
 using AutoMapper;
+using ApplicationContract.Commands;
 
 namespace WebApplication1.Controllers
 {
@@ -63,8 +63,8 @@ namespace WebApplication1.Controllers
                 return BadRequest();
             }
 
-            var request = new UpdateProductRequest(id, product);
-            var result = await _mediator.Send(request);
+            var request = new UpdateProductCommand(id, product);
+            var result = await _mediator.Send<bool>((IRequest<bool>)request);
 
             if (result)
             {
@@ -81,7 +81,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
-            var query = new CreateProductRequest(product);
+            var query = new CreateProductCommand(product);
             var result = await _mediator.Send(query);
 
             return Ok(result);

@@ -4039,6 +4039,84 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ApplicationContract": "1.0.0",
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Buisness": "1.0.0",
+          "Data": "1.0.0",
+          "MediatR": "7.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.5",
+          "Microsoft.EntityFrameworkCore": "7.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.16",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
+      "ApplicationContract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Buisness": "1.0.0",
+          "MediatR": "7.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.5",
+          "Microsoft.EntityFrameworkCore": "7.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.16",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/ApplicationContract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApplicationContract.dll": {}
+        }
+      },
+      "Buisness/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Buisness.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Buisness.dll": {}
+        }
+      },
+      "Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Buisness": "1.0.0",
+          "MediatR": "7.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.5",
+          "Microsoft.EntityFrameworkCore": "7.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.16",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.dll": {}
+        }
       }
     }
   },
@@ -11825,12 +11903,36 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
+    "ApplicationContract/1.0.0": {
+      "type": "project",
+      "path": "../ApplicationContract/ApplicationContract.csproj",
+      "msbuildProject": "../ApplicationContract/ApplicationContract.csproj"
+    },
+    "Buisness/1.0.0": {
+      "type": "project",
+      "path": "../Buisness/Buisness.csproj",
+      "msbuildProject": "../Buisness/Buisness.csproj"
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Data.csproj",
+      "msbuildProject": "../Domain/Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Application >= 1.0.0",
+      "ApplicationContract >= 1.0.0",
       "AutoMapper >= 9.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 7.0.0",
+      "Buisness >= 1.0.0",
+      "Data >= 1.0.0",
       "MediatR >= 7.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 7.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
@@ -11867,7 +11969,20 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\source\\repos\\WebApplication1\\ApplicationContract\\ApplicationContract.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\WebApplication1\\ApplicationContract\\ApplicationContract.csproj"
+            },
+            "C:\\Users\\User\\source\\repos\\WebApplication1\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\WebApplication1\\Application\\Application.csproj"
+            },
+            "C:\\Users\\User\\source\\repos\\WebApplication1\\Buisness\\Buisness.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\WebApplication1\\Buisness\\Buisness.csproj"
+            },
+            "C:\\Users\\User\\source\\repos\\WebApplication1\\Domain\\Data.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\WebApplication1\\Domain\\Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
